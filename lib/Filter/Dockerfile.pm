@@ -4,7 +4,7 @@ use LWP::UserAgent;
 use strict;
 use warnings;
 use version;
-our $VERSION = version->declare("0.0.1");
+our $VERSION = version->declare("0.0.2");
 
 sub import {
     my ($type) = @_;
