@@ -9,7 +9,7 @@ dfpp - Dockerfile preprocessor
 
 =head1 SYNOPSIS
 
-    $ dfpp Dockerfile.pre > Dockerfile
+    $ perl -MFilter::Dockerfile Dockerfile.pre > Dockerfile
 
     # Dockerfile Syntax:
     INCLUDE ./Dockerfile.inc
@@ -17,6 +17,18 @@ dfpp - Dockerfile preprocessor
     INCLUDE ./Dockerfile.inc http://path/to/Dockerfile.inc
 
     INCLUDE MERGE a.inc b.inc
+
+    # include only RUN instructions
+    INCLUDE RUN a.inc b.inc
+
+    # include only RUN and ENV instructions
+    INCLUDE RUN ENV a.inc b.inc
+   
+    # include only RUN and ENV instructions but merge them
+    INCLUDE MERGE RUN ENV a.inc b.inc
+
+    # exclude FROM instructions
+    INCLUDE -FROM a.inc b.inc
 
 =head1 DESCRIPTION
 
