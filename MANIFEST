@@ -1,0 +1,11 @@
+CHANGES
+INSTALL
+lib/Filter/Dockerfile.pm
+bin/dfpp
+LICENSE.TXT
+Makefile.PL
+MANIFEST
+README
+t/00-load.t
+t/manifest.t
+t/pod.t
